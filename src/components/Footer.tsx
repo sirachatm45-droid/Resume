@@ -42,7 +42,7 @@ export const Footer: React.FC = () => {
         </ul>
         
         <div className="footer-copy">
-          &copy; {new Date().getFullYear()} Your Name. All rights reserved.
+          &copy; {new Date().getFullYear()} Sirachat Maisuaydee. All rights reserved.
         </div>
       </div>
     </footer>

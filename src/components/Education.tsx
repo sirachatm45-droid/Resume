@@ -24,12 +24,11 @@ export const Education: React.FC = () => {
     <section id="education" className="section container">
       <h2 className="section-title">Education</h2>
 
-      <div style={{ display: 'flex', justifyContent: 'center', marginTop: '50px' }}>
+      <div className="education-wrapper">
         {educationList.map((edu) => (
           <div
             key={edu.id}
-            className="glass timeline-content"
-            style={{ maxWidth: '600px', width: '100%', padding: '30px' }}
+            className="glass timeline-content education-card"
           >
             <span className="timeline-date">{edu.duration}</span>
 

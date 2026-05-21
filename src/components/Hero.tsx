@@ -24,7 +24,7 @@ export const Hero: React.FC = () => {
           <span className="hero-subtitle">Welcome to my space</span>
           <h1 className="hero-title">
             Hi, I'm <span>Sirachat Maisuaydee</span><br />
-            Computer Engineering
+            Computer Engineering Student
           </h1>
           <p className="hero-desc">
             Computer Engineering student with experience in IoT development, embedded systems, and website programming. Passionate about building practical solutions and continuously developing technical skills through projects, competitions, and teamwork.

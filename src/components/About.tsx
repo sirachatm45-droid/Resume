@@ -6,7 +6,7 @@ export const About: React.FC = () => {
     {
       category: 'Hardware',
       icon: <Cpu size={18} />,
-      skills: ['ESP32', 'ESP8266', 'ARDUINO'],
+      skills: ['ESP32', 'ESP8266', 'Arduino'],
     },
     {
       category: 'Programming',

@@ -97,7 +97,7 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
               Contact
             </span>
           </li>
-          <li style={{ display: 'flex', alignItems: 'center' }}>
+          <li className="desktop-theme-toggle-li" style={{ display: 'flex', alignItems: 'center' }}>
             <button
               onClick={toggleTheme}
               className="theme-toggle-btn"
@@ -109,7 +109,15 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
         </ul>
 
         <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-          {/* Mobile Theme Toggle (only visible next to menu button on small screen if necessary, or just inside standard list) */}
+          {/* Mobile Theme Toggle (only visible next to menu button on small screen) */}
+          <button
+            onClick={toggleTheme}
+            className="theme-toggle-btn mobile-theme-toggle"
+            aria-label="Toggle theme"
+          >
+            {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
+          
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="menu-btn"

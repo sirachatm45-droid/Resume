@@ -308,7 +308,7 @@ a {
 
 .logo {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-size: clamp(1.1rem, 4.5vw, 1.5rem);
   font-weight: 800;
   background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   -webkit-background-clip: text;
@@ -645,6 +645,25 @@ a {
   color: var(--text-inverse);
 }
 
+/* --- Education Section --- */
+.education-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.education-card {
+  max-width: 600px;
+  width: 100%;
+  padding: 30px;
+}
+
+@media (max-width: 576px) {
+  .education-card {
+    padding: 20px;
+  }
+}
+
 /* --- Lightbox Modal --- */
 .lightbox-modal {
   position: fixed;
@@ -782,7 +801,7 @@ a {
 /* --- Projects Section --- */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
   gap: 30px;
   max-width: 960px;
   margin: 0 auto;
@@ -1007,10 +1026,11 @@ a {
 }
 
 .contact-item-value {
-  font-size: 1rem;
+  font-size: clamp(0.85rem, 3.5vw, 1rem);
   font-weight: 600;
   color: var(--text-main);
   word-break: break-all;
+  overflow-wrap: break-word;
   transition: color var(--transition-fast);
 }
 
@@ -1139,9 +1159,43 @@ a {
   }
 }
 
+@media (max-width: 850px) {
+  .timeline::after {
+    left: 30px;
+  }
+  
+  .timeline-item {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 20px;
+    text-align: left !important;
+  }
+  
+  .timeline-item.left {
+    left: 0;
+  }
+  
+  .timeline-item.right {
+    left: 0;
+  }
+  
+  .timeline-item::after {
+    left: 22px !important;
+    right: auto !important;
+  }
+}
+
 @media (max-width: 768px) {
   .menu-btn {
     display: block;
+  }
+
+  .mobile-theme-toggle {
+    display: flex;
+  }
+
+  .desktop-theme-toggle-li {
+    display: none !important;
   }
   
   .nav-menu {
@@ -1168,28 +1222,31 @@ a {
     opacity: 1;
     pointer-events: auto;
   }
-  
-  .timeline::after {
-    left: 30px;
+
+  .section {
+    padding: 80px 0 40px;
   }
-  
-  .timeline-item {
-    width: 100%;
-    padding-left: 60px;
-    padding-right: 20px;
-    text-align: left !important;
+
+  .section-title {
+    margin-bottom: 30px;
   }
-  
-  .timeline-item.left {
-    left: 0;
+
+  .about-card {
+    padding: 24px 20px;
   }
-  
-  .timeline-item.right {
-    left: 0;
+
+  /* Force slider control visibility on touch/mobile devices */
+  .slider-control {
+    opacity: 1 !important;
   }
-  
-  .timeline-item::after {
-    left: 22px !important;
-    right: auto !important;
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .project-image-wrapper {
+    height: 220px;
   }
 }

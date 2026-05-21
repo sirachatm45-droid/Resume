@@ -37,7 +37,7 @@ export const Projects: React.FC = () => {
     {
       id: 2,
       title: 'Environmental Monitoring And Irrigation Control System Via LoRa Network For Nong Khiew Royal Project Development Center',
-      desc: 'Developed and optimized user interfaces and portals for Nong Khiew Royal Project Development Center monitoring environmental metrics via LoRa Networks.',
+      desc: 'Developed and optimized user interfaces and web portals for the Nong Khiew Royal Project Development Center to monitor environmental metrics via LoRa networks.',
       tags: ['React', 'LoRa Network', 'Web Portals', 'Environmental Monitoring'],
       images: [lora1, lora2, lora3, lora4, lora5],
     },
