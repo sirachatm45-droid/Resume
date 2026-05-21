@@ -100,8 +100,11 @@
 }
 
 /* --- Base Styles --- */
-* {
+*, *::before, *::after {
   box-sizing: border-box;
+}
+
+* {
   margin: 0;
   padding: 0;
 }
@@ -374,6 +377,10 @@ a {
   transform: scale(1.05);
 }
 
+.mobile-theme-toggle {
+  display: none;
+}
+
 /* --- Hero Section --- */
 .hero-content {
   display: grid;
@@ -576,10 +583,17 @@ a {
   z-index: 2;
   transition: all var(--transition-fast);
   box-shadow: var(--shadow-sm);
+  box-sizing: border-box;
+}
+
+.timeline-item.left::after {
+  right: -8px;
+  left: auto;
 }
 
 .timeline-item.right::after {
   left: -8px;
+  right: auto;
 }
 
 .timeline-item:hover::after {
@@ -1162,6 +1176,7 @@ a {
 @media (max-width: 850px) {
   .timeline::after {
     left: 30px;
+    transform: none;
   }
   
   .timeline-item {
