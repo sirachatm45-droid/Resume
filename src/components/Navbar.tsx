@@ -13,7 +13,7 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
   // Monitor scroll to update active nav link
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'experience', 'education', 'projects', 'contact'];
+      const sections = ['home', 'about', 'experience', 'education', 'projects', 'internship', 'contact'];
       const scrollPosition = window.scrollY + 100; // Offset for navbar height
 
       for (const section of sections) {
@@ -87,6 +87,14 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
               onClick={() => handleNavClick('projects')}
             >
               Projects
+            </span>
+          </li>
+          <li>
+            <span
+              className={`nav-link ${activeSection === 'internship' ? 'active' : ''}`}
+              onClick={() => handleNavClick('internship')}
+            >
+              Internship
             </span>
           </li>
           <li>

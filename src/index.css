@@ -873,7 +873,8 @@ a {
   backdrop-filter: blur(4px);
 }
 
-.project-image-wrapper:hover .slider-control {
+.project-image-wrapper:hover .slider-control,
+.internship-image-wrapper:hover .slider-control {
   opacity: 1;
 }
 
@@ -979,6 +980,87 @@ a {
 
 .project-link:hover {
   color: var(--color-primary);
+}
+
+/* --- Internship Section --- */
+.internship-wrapper {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.internship-card {
+  max-width: 900px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  overflow: hidden;
+}
+
+.internship-image-wrapper {
+  position: relative;
+  min-height: 350px;
+  background: #090d16;
+}
+
+.internship-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.internship-card:hover .internship-img {
+  transform: scale(1.05);
+}
+
+.internship-info {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.internship-title {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.internship-subtitle {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.internship-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.internship-keypoints {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.internship-keypoint {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.internship-keypoint svg {
+  margin-top: 3px;
+  flex-shrink: 0;
+  color: var(--color-secondary);
 }
 
 /* --- Contact Section --- */
@@ -1261,6 +1343,19 @@ a {
   /* Force slider control visibility on touch/mobile devices */
   .slider-control {
     opacity: 1 !important;
+  }
+
+  .internship-card {
+    grid-template-columns: 1fr;
+  }
+
+  .internship-image-wrapper {
+    min-height: 250px;
+    height: 250px;
+  }
+
+  .internship-info {
+    padding: 30px 24px;
   }
 }
 
