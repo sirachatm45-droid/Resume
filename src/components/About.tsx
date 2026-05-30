@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Cpu, Globe, Layers, Database } from 'lucide-react';
+import { Code, Cpu, Globe, Layers, Database, Download } from 'lucide-react';
 
 export const About: React.FC = () => {
   const skillsData = [
@@ -53,6 +53,15 @@ export const About: React.FC = () => {
               I am highly enthusiastic, responsible, and committed to continuous learning. I look forward to working on new challenges in embedded architectures and responsive systems.
             </p>
           </div>
+          
+          <a 
+            href={`${import.meta.env.BASE_URL}resume.pdf`} 
+            download="Sirachat_Resume.pdf" 
+            className="btn btn-primary" 
+            style={{ marginTop: '20px', display: 'inline-flex' }}
+          >
+            <Download size={18} /> Download Resume
+          </a>
         </div>
 
         {/* Right Card: Skills Matrix */}
